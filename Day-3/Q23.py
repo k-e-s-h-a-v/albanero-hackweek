@@ -36,19 +36,4 @@ class LinkedList:
             print(current.data,end=' -> ')
             current = current.next
         print('None')
-
-listwa = LinkedList()
-
-print('Enter list (one element at a time)')
-while True:
-    digit = input("-> ")
-    if not digit: break
-    listwa.insert(int(digit))
-    
-print('The list before rearrangement ',)
-listwa.DisplayLinkedList()
-print()
-
-print('The list after rearrangement ')
-listwa.oddEven()
-listwa.DisplayLinkedList()    
+  
