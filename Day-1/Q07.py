@@ -18,11 +18,11 @@ def max1s(A, K):
 	count0 = left = ans = 0
 
 	for i in range(len(A)):
-		if A[i] == 0:
+		if not A[i]:
 			count0 += 1
 
 		while (count0 > K):
-			if A[left] == 0:
+			if not A[left]:
 				count0 -= 1
 			left += 1
 		ans = max(ans, i - left + 1)
