@@ -25,12 +25,11 @@ def max1s(A, K):
 			if not A[left]:
 				count0 -= 1
 			left += 1
-		ans = max(ans, i - left + 1)
+	ans = max(ans, i - left + 1)
 	return ans
 
 
 
 examples = [[1,1,1,0,0,0,1,1,1,1,0], [0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1]]
 K = [2, 3]
-for i in range(len(examples)):
-    print(examples[i],'➞ ',max1s(examples[i], K[i]))
+	for i in range(len(examples)): print(examples[i],'➞ ',max1s(examples[i], K[i]))
