@@ -1,0 +1,161 @@
+Q31 Write a program  that takes an array of arrays with numbers. 
+Return a new (single) array with the largest numbers of each.
+
+  Examples
+    ([[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]]) ➞ [7, 90, 2]
+
+    ([[-34, -54, -74], [-32, -2, -65], [-54, 7, -43]]) ➞ [-34, -2, 7]
+
+    ([[0.4321, 0.7634, 0.652], [1.324, 9.32, 2.5423, 6.4314], [9, 3, 6, 3]]) ➞ [0.7634, 9.32, 9]
+
+
+
+Q32. A set is a collection of unique items. 
+A set can be formed from an array from removing all duplicate items.
+
+  [1, 3, 3, 5, 5, 5]
+  // original array
+
+  [1, 3, 5]
+  // original array transformed into a set
+  Write a program that sorts an array and removes all duplicate items from it.
+
+  Examples
+    ([1, 3, 3, 5, 5]) ➞ [1, 3, 5]
+    ([4, 4, 4, 4]) ➞ [4]
+    ([5, 7, 8, 9, 10, 15]) ➞ [5, 7, 8, 9, 10, 15]
+    ([3, 3, 3, 2, 1]) ➞ [1, 2, 3]
+
+  Notes
+    All arrays will have at least one element.
+    For this question, output an array, not a set.
+
+
+Q33. Write a program that takes an array of names and returns an array 
+where only the first letter of each name is capitalized.
+
+  Examples
+    (["mavis", "senaida", "letty"]) ➞ ["Mavis", "Senaida", "Letty"]
+    (["samuel", "MABELLE", "letitia", "meridith"]) ➞ ["Samuel", "Mabelle", "Letitia", "Meridith"]
+    (["Slyvia", "Kristal", "Sharilyn", "Calista"]) ➞ ["Slyvia", "Kristal", "Sharilyn", "Calista"]
+  
+  Notes
+    Don't change the order of the original array.
+    Notice in the second example above, "MABELLE" is returned as "Mabelle".
+
+
+Q34. The digit distance between two numbers is the total value of the 
+difference between each pair of digits.
+
+  To illustrate:
+
+    (234, 489) ➞ 12
+    // Since |2 - 4| + |3 - 8| + |4 - 9| = 2 + 5 + 5
+  Write a program that returns the digit distance between two integers.
+
+  Examples
+    (121, 599) ➞ 19
+
+    (12, 12) ➞ 0
+
+    (10, 20) ➞ 1
+
+  Notes
+    Both integers will be exactly the same length.
+    All digits in num2 have to be higher than their counterparts in num1.
+
+
+Q35. Write a program that takes an array of two numbers and determines
+ if the sum of the digits in each number are equal to each other.
+
+  Examples
+    ([105, 42]) ➞ true
+    # 1 + 0 + 5 = 6
+    # 4 + 2 = 6
+
+    ([21, 35]) ➞ false
+
+    ([0, 0]) ➞ true
+
+
+Q36. You are climbing a staircase. It takes n steps to reach the top.
+Each time you can either climb 1 or 2 steps.
+ In how many distinct ways can you climb to the top?
+  Examples:
+  Input: n = 2
+  Output: 2
+  Explanation: There are two ways to climb to the top.
+  1. 1 step + 1 step
+  2. 2 steps
+  Input: n = 3
+  Output: 3
+  Explanation: There are three ways to climb to the top.
+  1. 1 step + 1 step + 1 step
+  2. 1 step + 2 steps
+  3. 2 steps + 1 step
+
+
+
+Q37. Given an integer num, return an array of the number of 1's 
+in the binary representation 
+of every number in the range [0, num].
+  Examples:
+  Input: num = 2
+  Output: [0,1,1]
+  Explanation:
+  0 --> 0
+  1 --> 1
+  2 --> 10
+  Input: num = 5
+  Output: [0,1,1,2,1,2]
+  Explanation:
+  0 --> 0
+  1 --> 1
+  2 --> 10
+  3 --> 11
+  4 --> 100
+  5 --> 101
+
+
+
+Q38. You are given an integer array cost where cost[i] 
+is the cost of ith step on a staircase. 
+Once you pay the cost, you can either climb one or two steps.
+You can either start from the step with index 0, or the step with index 1.
+Return the minimum cost to reach the top of the floor.
+  Examples:
+  Input: cost = [10,15,20]
+  Output: 15
+  Explanation: Cheapest is: start on cost[1], pay that cost, and go to the top.
+  Input: cost = [1,100,1,1,1,100,1,1,100,1]
+  Output: 6
+  Explanation: Cheapest is: start on cost[0], and only step on 1s, skipping cost[3].
+ 
+
+
+
+Q39 Given an integer array nums, 
+find the contiguous subarray (containing at least one number) 
+which has the largest sum and return its sum.
+  Examples:
+  Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+  Output: 6
+  Explanation: [4,-1,2,1] has the largest sum = 6.
+  Input: nums = [1]
+  Output: 1
+  Input: nums = [5,4,-1,7,8]
+  Output: 23
+
+
+
+Q40. Given two strings s and t, check if s is a subsequence of t.
+A subsequence of a string is a new string that is formed from the 
+original string by deleting some (can be none) of the characters 
+without disturbing the relative positions of the remaining characters. 
+(i.e., "ace" is a subsequence of "abcde" while "aec" is not).
+  Examples:
+  Input: s = "abc", t = "ahbgdc"
+  Output: true
+  Input: s = "axc", t = "ahbgdc"
+  Output: false
+  Collapse
