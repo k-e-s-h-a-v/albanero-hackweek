@@ -18,6 +18,7 @@ class Node:
 class LinkedList:
     def __init__(self):    
         self.head = None
+        self.tail = None
     
     def insert(self, data):
         newNode = Node(data)
@@ -26,9 +27,27 @@ class LinkedList:
             while(current.next):
                 current = current.next
             current.next = newNode
+            self.tail = newNode
         else:
             self.head = newNode
+            
+    def get_prev_node(self, ref_node):
+        current = self.head
+        while (current and current.next != ref_node):
+            current = current.next
+        return current
 
+    def reorder(self):
+        if not (self.head):
+            return
+        current = self.head
+        front = self.head.next
+        back = self.tail
+        while current.next:
+            ############################# cant code this part ###############################
+            
+
+    
     
     def DisplayLinkedList(self):
         current = self.head
@@ -36,4 +55,19 @@ class LinkedList:
             print(current.data,end=' -> ')
             current = current.next
         print('None')
-  
+
+listwa = LinkedList()
+
+print('Enter list (one element at a time)')
+while True:
+    digit = input("-> ")
+    if not digit: break
+    listwa.insert(int(digit))
+    
+print('The list before rearrangement ',)
+listwa.DisplayLinkedList()
+print()
+
+print('The list after rearrangement ')
+listwa.reorder()
+listwa.DisplayLinkedList()    
